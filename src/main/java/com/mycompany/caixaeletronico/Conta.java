@@ -38,14 +38,14 @@ public class Conta {
     }
 
     public double verificarSaldo(){
-        return this.saldo;
+        return getSaldo();
     }
 
-    public void realizarDeposito(double valor){
-        this.saldo += valor;
+    public void realizarDeposito(double valorDeposito){
+        setSaldo(valorDeposito + getSaldo());
     }
 
-    public void realizarSaque(double saldo){
-        this.saldo -= saldo;
+    public void realizarSaque(double valorDeposito){
+        setSaldo(getSaldo() - valorDeposito);
     }
 }
